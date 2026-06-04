@@ -1,0 +1,118 @@
+1.SINGLETON CLASS:
+ creating an single object and using it in other classes without creating object (like abstract method were we use method as template)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ OWN NOTES--> in normal method if we create two objects [ class obj1 = new class(); & class obj2 = new Class();] --both object i.e obj1 and obj2 will have different memory address.
+
+* but in singleton method if we  create/call    two objects in main method [ class obj1 = class.singletonmethodname(); & class obj2 = class.singletonmethodname(); ] both object i.e obj1 and obj2 will have same memory address.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+2.REQUIREMENTS:
+  i) static instance variable
+ ii) private constructor
+iii) static method --> to create an object using the variable name.
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+SAMPLE PROGRAM:
+
+public class DatabaseConnection {
+
+    // 1. The self-referencing static variable you asked about (set to null)
+    public static DatabaseConnection instance = null;---------------------------------------------> STATIC INSTANCE VARIABLE
+
+    // 2. A private constructor (prevents anyone else from using 'new DatabaseConnection()')------> PRIVATE CONSTRUCTOR
+    private DatabaseConnection() {
+        System.out.println("Connection created!");
+    }
+
+    // 3. A static method that creates the object only if it doesn't exist yet
+    public static DatabaseConnection getInstance() {  ---------------------------------------------> FACTORY METHOD
+        if (instance == null) {
+            // Lazy initialization: It only creates the object the FIRST time this is called
+            instance = new DatabaseConnection(); 
+        }
+        return instance; // Returns the single shared object
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+ *CALLING METHODS IN SAME CLASS (SINGLETON CLASS METHOD)
+
+   1. Classname obj =  Classname.Factorymethod ();
+                    (OR)
+   2. Classname obj = Factorymethod ();
+
+     [ both the methods are same and has no difference ]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*CALLING METHODS INTO ANOTHER CLASS: ---"PRIVATE CONSTRUCTOR / METHOD --- (refer class1 & Class7 in the package projectClass)
+
+   NOTE: "the method should be declared static."
+ 
+1.Static void method:
+   OriginalClassName.OriginalMethodName();
+
+2.Static return method:
+   ReturnDatatype object = OriginalClassName.OrignalMethodName();
+   Eg.int obj  = Class1.Class1returnmethod();
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*TO CALL A METHOD FROM ANOTHER CLASS (SINGLETON CLASS)
+
+1.To call a object returned method (Class named object --Singleton class) 
+   OriginalClassName variable = OriginalClassName.OriginalMethodName();
+   Eg. Classone obj = Classone.methodone();
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*CALLING METHODS INTO ANOTHER CLASS: ---"NORMAL MEHTOD"---> (refer class1 & Class7 in the package projectClass)
+
+ STEP 1 : Create object in the name of original class in the new Class.
+        SYNTAX: OriginalClassname var = new OriginalClassName();
+            Eg. Class7 var = new Class7();
+
+ STEP 2 : Call the methods of the original classname using :
+      SYNTAX : OriginalClassName.OrignalMethodName();
+          Eg . Class7.methodone();
+ 
+    "SAME SYNTAX FOR BOTH VOID AND RETURN TYPE"
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+*OBJECT CREATION ---> TWO TYPES 
+
+  1.Classname object =  new Classname();  ----> (DECLERATION & INITIALIZATION TYPE)
+    ---> when the variable name is written or introduced for the first time  
+
+  2.Object = new Classname(); ----> When the variable name is already declared; ---->(REASSIGNMENT TYPE)
+    STEP 1 : Classname object = null; ---> initializing variable
+    STEP 2 : object = new Classname(); --> object creation
+    
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+*METHODS REQUIRING RETURN TYPE:
+
+1.PRIMITIVE DATA TYPES - int, boolean, char, byte, short, float, double, long    -->
+
+   Eg. public static int method() {}
+
+2.REFERENCE DATAT TYPES ----> ClassName, String, Array 
+    
+   Eg. public static classname method() {} ---> returns oject as return type
+
+
+
+
+
+
+
+
+
+
+
