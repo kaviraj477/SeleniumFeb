@@ -1,0 +1,59 @@
+GIT HUB:
+
+#1 : install git hub
+#2 : open uses > admin folder >  right click ---> more options---> open git bash here
+#3 : git(space)config --global user.email "mailId"
+       --->it configures git throughout the system with this user
+
+#4 : git config --global user.name "USERNAME OF GITHUB"
+
+#5 : cross-checking: open user admin folder , ther --> .gitconfig (file is present) ---> open the file with notepad and u will see username and mailID there.
+
+#6 : This process connects the system with GitHub application.
+
+#7 : open GitHub online --> Open profile --> Click New repository create --> enter project name in repository name tab
+
+#8 : click create repository ---> Copy https link -->right click project (in EclipeIDE)--> properties -->Location icon-->open project folder --> right click --> git bash --> 
+
+#9 : git init--> Enter -->open folder again (without closing GitHub) --> view --> show--> hidden items --> .git (folder is visible)
+
+#10 : again in git --> git add "paste project folder path \pom.xml" ------>STAGING
+
+#11 : GitHub > git add . -->Enter --> git commit -m "message we want to give"-->Enter
+
+#12 : All our project files are added in .git folder
+
+#13 : GitHub  > git remote add origin "paste repository URL " --> Enter ---> git push origin master [ UPLOADS .git FOLDER ON THE PASTED REPOSITORY URL ]-->
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+IN SHORT:
+
+git config --global user.email "email id" - to config the email globally in local machine
+git config --global user.name "username" - to config the user name globally in local machine
+
+git init - to initialise a .git folder in the working project
+git add . - to add each and every file into the .git folder
+git commit -m "Message" - to commit the staged or added files in the .git folder with message
+git remote add origin "repo url" - to add the repository url to the .git folder
+git push origin master - to upload the added code into the remote repository
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.WHEN WE WANT TO UPDATE THE CHANGES MADE IN OUR LOCAL TO GITHUB
+i)   open gitBash in local folder
+ii)  git status
+iii) git add .
+iv)  git commit -m "message we want to send"
+v)   git push origin master
+
+
+
+1.WHEN WE CREATE / DELETE ANYTHING DIRECTLY IN GITHUB
+i)   open the local folder
+ii)  open gitBash
+iii) git pull origin master
+iv) IN CASE OF ERROR (blue text box) type> [Esc (one time)---> type (:wq) ---> enter---> git push origin master
+
+
+
