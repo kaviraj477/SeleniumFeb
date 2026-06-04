@@ -33,7 +33,7 @@ public class Class3 {                          // two types of variable = 1.ints
 	
 	public static void main (String [] args) { //we can call methods without creating object because of static
 
-		Class3 objectinstance = new Class3();
+		Class3 objectinstance = new Class3();          // creating object for instance variable
 		System.out.println(objectinstance.instance3);  //calling instance varaiable value (objectname.variablename)
 		 
 		System.out.println(Class3.instance4);          // calling static variable (classname.variablename)
@@ -41,7 +41,7 @@ public class Class3 {                          // two types of variable = 1.ints
 		System.out.println(methodone(4,5,6)); //calling method for static + return
 		methodtwo(); //calling method for static +void (non return type)
 		
-	    Class3 object =  new Class3(); //calling method for non static type
+	    Class3 object =  new Class3(); //calling method for non static type (ojectname.methodname)
 		System.out.println(object.methodthree());
 		System.out.println(object.instance1);  //calling instance values using other objects
 		System.out.println(object.instance3);

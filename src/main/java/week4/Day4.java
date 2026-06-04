@@ -1,5 +1,7 @@
 package week4;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,7 +21,8 @@ public class Day4 {
 		//To get title:
 		String title = driver.getTitle();
 		System.out.println(title);
-		
+	//---------------------------------------------------------------------------------
+		driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 		
 		
 		//Methods to locate email:

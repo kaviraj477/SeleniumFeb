@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Day1 {
+public class RobotClass {
 	
 	//Use case:
 	// 1) Open the URL

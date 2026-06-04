@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Day5Actions {
-	
+//for webelement var.click(); but for Actions var.click().build().perform();	
 	public static void main (String [] args) throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		
@@ -24,7 +24,7 @@ public class Day5Actions {
 		WebElement password    = driver.findElement(By.xpath("//input[@name='pass']"));
 		WebElement loginButton = driver.findElement(By.xpath("//span[text()='Log in']"));
 		
-		//Actions:(inputing values)
+		//Actions:(inputing values) 
 		Actions a = new Actions(driver);                           // import Actions
 		a.sendKeys(email,"abddfsd@gmail.com").build().perform();   // action'svar.sendkeys(element'svar,"user value");
 		a.sendKeys(password,"sdfjnsdijfnis").build().perform();    // action'svar.sendkeys(element'svar,"user value");

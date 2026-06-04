@@ -16,6 +16,7 @@ public class Day1 {
 		driver.get("https://www.facebook.com/");
 		
 		System.setProperty("webdriver.edge.driver", "E:\\sele drives\\edgedriver_win64\\msedgedriver.exe");
+		WebDriverManager.edgedriver().setup();
 		WebDriver driveredge = new EdgeDriver();
 		driveredge.get("https://www.facebook.com/");
 		
