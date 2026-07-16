@@ -24,9 +24,10 @@ public class JavaScriptMethod {
 		js.executeScript("window.location = 'https://demoqa.com/alerts'");
 		driver.manage().window().maximize();
 		
+		//Locating the element:
+		WebElement simple = driver.findElement(By.xpath("//span[text()='Click Button to see alert '] "));
 		
 		//Highlighting the text with box:
-		WebElement simple = driver.findElement(By.xpath("//span[text()='Click Button to see alert '] "));
 		js.executeScript("arguments[0].style.border='3px solid green'",simple);
 		Thread.sleep(2000);
 		

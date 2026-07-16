@@ -37,12 +37,17 @@ public class WindowHandling {
 		}
 		
 		//scroll to view :
+		try {
 	   WebElement remote = driver.findElement(By.xpath("//span[text()='Remote']"));
 	   JavascriptExecutor js = (JavascriptExecutor)driver;
 	   js.executeScript("arguments[0].scrollIntoView({block:'center'});",remote); //views the element in the centre
 	   remote.click();
+	   System.out.println("next element located and clicked");
 	   Thread.sleep(3000);
-	   
+		}
+		catch (Exception e) {
+			System.out.println("js not executed");
+		}
 	   //Window Handling:
 	     
 	   String parentHandleID = driver.getWindowHandle();   //fetching the unique ID and saving in String's variable

@@ -17,7 +17,7 @@ public class Hrefcounting {
 		
 		driver.get("https://www.facebook.com");
 		driver.manage().window().maximize();
-		
+	
 		List <WebElement> hrefvalue = driver.findElements(By.xpath("//a[@href]"));
 		int hrefnames = hrefvalue.size();
 		System.out.println(hrefnames);

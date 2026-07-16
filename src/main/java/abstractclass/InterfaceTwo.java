@@ -6,6 +6,9 @@ public interface InterfaceTwo {
 	int b = 40;
 	int c = 20;
 	
+ 
+ 
+	
 
 
 }

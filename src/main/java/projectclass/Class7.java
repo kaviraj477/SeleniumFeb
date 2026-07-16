@@ -19,6 +19,7 @@ public class Class7 {
 
 	public static void main (String [] args) {
 		Class7 object = new Class7();
+		
 		object.methodone();
 		object.methodtwo();
 		

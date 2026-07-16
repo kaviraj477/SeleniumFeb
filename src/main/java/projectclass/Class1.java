@@ -1,5 +1,7 @@
 package projectclass;
 
+import dummy.Sample3;
+
 public class Class1 {
 	
 	public static void Class1method() {
@@ -16,6 +18,7 @@ public class Class1 {
 	public static void main (String [ ] args) {
 		
 		Class1 objClass1 = new Class1(); 
+		Sample3 obj = new Sample3(); 
 		
 	 System.out.println("number 1");
 	 Class2();

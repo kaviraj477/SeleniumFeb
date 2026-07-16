@@ -9,7 +9,13 @@ public abstract class DummyAbs {  //1.public abstract - this class can be used i
 	//3.abstract method cannot be static
 	//4.we cannot create object for abstract class as we have method without body
 	
-	}
+	
+ 
+   public static void methodtwo() {
+	   System.out.println("from normal method");
+   
+	   
+   }
 	
 	
 
@@ -22,7 +28,7 @@ class DummyAbs2 extends DummyAbs{   //1.this class should not be named as public
 	
 	
 	
-}
+	}}}
 	
 	
-}
+

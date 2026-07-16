@@ -82,25 +82,26 @@ public class Dummy7 {
 		System.out.println(object1);   //method for printing constructor (as usual)
 		
 		//---------------------------------------------------------------------------------------
-		Dummy7 object2 = new Dummy7();
-		object2.nonstaticmethod();   //method for calling non static method
+		Dummy7 object2 = new Dummy7();  //object creation
+		object2.nonstaticmethod();   //calling object; method for calling non static method
 		//----------------------------------------------------------------------------------------
 		object2.nonstaticreturnmethod(); //method for calling non static return type
 		System.out.println(object2.nonstaticreturnmethod());  //printing for non static return type
 		
 		//--------------------------------------------------------------------------------------
-		argumentsmethod(20,"Name"); //method for calling arguments method (no need to add any print statement)
+		argumentsmethod(20,"Name"); //method for calling arguments static method (no need to add any print statement)
 		
 		//----------------------------------------------------------------------------------------
 		
-		argumentsreturnmethod(10,5);
+		argumentsreturnmethod(10,5); //method for calling arguments return static method
 		//----------------------------------------------------------------------------------------
-		object2.argumentsnonstaticmethod(10, "String value");
+		object2.argumentsnonstaticmethod(10, "String value"); //method for calling arguments non static void method
 		
 		//----------------------------------------------------------------------------------------
-		object2.argumentspassednonstaticreturnmethod(10, 30);
+		object2.argumentspassednonstaticreturnmethod(10, 30); //method for calling arguments non-static return method
 		
 		//----------------------------------------------------------------------------------------
+		    //method for calling a static instance variable method
 		int instancevariable = var3;
 		System.out.println("instance variable method "+ instancevariable);  //method #1
 		System.out.println(var3);  //method#2

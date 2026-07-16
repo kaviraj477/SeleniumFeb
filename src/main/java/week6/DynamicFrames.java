@@ -38,7 +38,7 @@ public class DynamicFrames {
 			Thread.sleep(2000);
 			
 			List<WebElement> target = driver.findElements(By.xpath("//img[@src='Jmeter720.png']")); //target frame locating
-			
+			JavascriptExecutor js = (JavascriptExecutor)driver;
 			//we should always use list and elements in plural form when we perform for loop to find element
 		
 	//-------------------------------2.PERFORM THE ACTION ON THE SPECIFIC IFRAME -------------------------------------------//		
@@ -48,8 +48,8 @@ public class DynamicFrames {
 			//WebElement variable = target.get(0);
 			//so replace target.get(0) with variable everywhere
 			Thread.sleep(2000);
-			JavascriptExecutor js = (JavascriptExecutor)driver;
-			js.executeScript("arguments[0].scrollIntoView({block:'center'});",target.get(0));
+			JavascriptExecutor  as = (JavascriptExecutor)driver;
+			as.executeScript("arguments[0].scrollIntoView({block:'center'});",target.get(0));
 			
 			Thread.sleep(2000);
 			target.get(0).click();    //performing the clicking action

@@ -3,7 +3,7 @@ package abstractclass;
 public interface InterfaceOne { //we cannot create objects for interface as like abstract class
 	
 	 void methodIntOne();  //all the methods are created as like abstract method
-	 int a = 10; //the value is static and fina (cannot be over written)
+	 int a = 10; //the value is static and final (cannot be over written)
 	 
 	 void methodIntTwo();
 	
