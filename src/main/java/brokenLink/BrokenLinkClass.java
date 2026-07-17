@@ -39,10 +39,10 @@ public class BrokenLinkClass {
 		}
 		
 		List <WebElement> a = driver.findElements(By.tagName("a"));
-		Iterator <WebElement> It = a.iterator();
+		Iterator <WebElement> It = a.iterator();  //Creating and initiating iterator by attaching it with list of webelements
 		
-		while (It.hasNext()) {
-			WebElement alinks = It.next();
+		while (It.hasNext()) { //it initiates the loop, as long as any elements present next it returns true and keeps on running at last it returns false and stops.
+			WebElement alinks = It.next(); // it grabs the next, next link and stores in temporary memory "alinks" 
 			String hreflinks = alinks.getAttribute("href"); // we need href from a tags as a not only contains href but also others lie style, class etc..
 	                                                        //return type of href is string
 			
