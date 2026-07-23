@@ -7,6 +7,8 @@ public class Dummy5 {
 
 	public static void main (String [] args) {
 		
+		//Dummy2 var = new Dummy2();
+		
 		List variable = new ArrayList();
 		
 		variable.add("Name");

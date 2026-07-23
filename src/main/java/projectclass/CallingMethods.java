@@ -1,6 +1,6 @@
 package projectclass;
 
-public class Dummy7 {
+public class CallingMethods {
 	
 	//1.Static method
 	public static void staticmethod() {    
@@ -16,7 +16,7 @@ public class Dummy7 {
 	}
 	
 	//3.Constructor type
-	public Dummy7() {
+	public CallingMethods() {
 		System.out.println("constructor method");
 	}
 	
@@ -78,11 +78,11 @@ public class Dummy7 {
 		staticreturnmethod(); //method for calling static retun type method
 		System.out.println(staticreturnmethod());  //method for printing static return type
 		// -------------------------------------------------------------------------------------
-		Dummy7 object1 = new Dummy7(); //method for calling constructor method (as usual like non- static method)
+		CallingMethods object1 = new CallingMethods(); //method for calling constructor method (as usual like non- static method)
 		System.out.println(object1);   //method for printing constructor (as usual)
 		
 		//---------------------------------------------------------------------------------------
-		Dummy7 object2 = new Dummy7();  //object creation
+		CallingMethods object2 = new CallingMethods();  //object creation
 		object2.nonstaticmethod();   //calling object; method for calling non static method
 		//----------------------------------------------------------------------------------------
 		object2.nonstaticreturnmethod(); //method for calling non static return type

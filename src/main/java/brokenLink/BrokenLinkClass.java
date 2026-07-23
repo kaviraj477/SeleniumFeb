@@ -15,6 +15,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrokenLinkClass {
 	
+
+	
 	public static void method () {  //since we are coding entire program in method body rather than main method it can be 
 		                           //-called in any class so it is called "REUSEABLE METHOD"
 		WebDriverManager.chromedriver().setup();
@@ -61,7 +63,8 @@ public class BrokenLinkClass {
 				try {
 				HttpURLConnection httplinks = (HttpURLConnection) (new URL(hreflinks).openConnection()); //this opens each and every href links
 			//	HttpURLConnection httplinks = (HttpURLConnection) (new URI(hreflinks).toURL().openConnection());----->Latest SYNTAX
-			    httplinks.setRequestMethod("HEAD"); //this method interacts with the server and request only the status code of the link
+			   
+				httplinks.setRequestMethod("HEAD"); //this method interacts with the server and request only the status code of the link
 			    httplinks.connect(); // this method creates the connection btw the server in order to process the request in previous step
 			    int RESPONSECODES = httplinks.getResponseCode(); // it fetches the response codes and its return type is int
 			    
@@ -111,7 +114,8 @@ public class BrokenLinkClass {
 		public static void main (String [] args) {
 			
 		method();
-
+	
+		
 		
 		
 	}
