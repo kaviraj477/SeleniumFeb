@@ -2,9 +2,9 @@ package practice;
 
 public class ThisClass {
 	
-	public String method1;
+	public String method1;  // creating an instance
 	public void method2 () {
-		this.method1= "king";
+		this.method1= "king"; // calling the instance and assigning value
 		System.out.println(this.method1);
 	}
 	
@@ -19,7 +19,7 @@ public class ThisClass {
 	
 	public void method5 () {
 		System.out.println("Parent");
-		this.method3();
+		this.method3();  // we can also call methods which is not static
 		this.method6("arguments");
 	}
 	

@@ -7,7 +7,7 @@ public class SuperClass extends ThisClass {
 	}
 	
 	public void methodparent () {  // creating a method to call parent methods in child classs
-		super.method5();  // super.parentmethodname();
+		super.method5();  // super.parentmethodname(); --> this calls the parent method5 not child method5
 	}
 
     
